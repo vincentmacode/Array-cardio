@@ -51,3 +51,11 @@ const inventors = [
     })
     console.log("Inventors sorted by years lived:");
     console.table(oldest);
+
+    //6 .Sort the people alphabetically by last name
+    const alpha = people.sort(function(lastOne, nextOne){
+      const [aLast, aFirst] = lastOne.split(', ');
+      const [bLast, bFirst] = nextOne.split(', ');
+      return aLast > bLast ? -1 : 1;
+    })
+    console.log(alpha)
